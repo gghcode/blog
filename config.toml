@@ -2,7 +2,6 @@ baseURL = "https://gyuhwankim.github.io/"
 languageCode = "en-us"
 title = "Gyuhwan Kim"
 theme = "hugo-future-imperfect"
-publishDir = "docs"
 preserveTaxonomyNames = true
 paginate = 3
 disqusShortname = "gyuhwankim-github-io"
