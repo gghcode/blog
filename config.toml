@@ -3,6 +3,11 @@ languageCode = "en-us"
 title = "Gyuhwan Kim"
 theme = "hugo-future-imperfect"
 publishDir = "docs"
+preserveTaxonomyNames = true
+paginate = 3
+disqusShortname = "gyuhwankim-github-io"
+googleAnalytics = ""
+pluralizeListTitles = false
 
 [params]
   # Sets the meta tag description
@@ -59,14 +64,13 @@ publishDir = "docs"
 
   # This appears at the top of the sidebar above params.intro.header.
   # A width of less than 100px is recommended from a design perspective.
-  [params.intro.pic]
-    src       = "/img/main/logo.jpg"
+  [params.intro.pic]   
+    src       = "https://avatars2.githubusercontent.com/u/14357806"
     # Sets Image to be a cirlce
     circle    = false
     # Sets Image to be Future Imperfect's hexagon
     imperfect = true
     width     = ""
-    alt       = "Hugo Future Imperfect"
 
 [params.postAmount]
 # Sets the number of recent posts to show in the sidebar. The default value is 5.
@@ -109,3 +113,58 @@ publishDir = "docs"
   url = "/contact/"
   identifier = "fa fa-envelope-o"
   weight = 6
+
+# Sets Social Media icons to appear and link to your account. Value should be your
+# username unless otherwise noted. These are the icons affected by socialAppearAtTop
+# and socialAppearAtBottom.
+[social]
+  # Coding Communities
+  github           = "gyuhwankim"
+  #gitlab           = ""
+  #stackoverflow    = "" # User Number
+  #bitbucket        = ""
+  #jsfiddle         = ""
+  #codepen          = ""
+  
+  # Visual Art Communities
+  #deviantart       = ""
+  #flickr           = "example"
+  #behance          = ""
+  #dribbble         = ""
+
+  # Publishing Communities
+  #wordpress        = ""
+  #medium           = ""
+
+  # Professional/Business Oriented Communities
+  #linkedin         = "example"
+  #linkedin_company = "examplebusiness"
+  #foursquare       = ""
+  #xing             = ""
+  #slideshare       = ""
+
+  # Social Networks
+  #facebook         = "example"
+  #googleplus       = ""
+  #reddit           = "example"
+  #quora            = ""
+  #youtube          = ""
+  #vimeo            = ""
+  #whatsapp         = "" # WhatsApp Number
+    # WeChat and QQ need testing.
+    #wechat         = ""
+    #qq             = "" # User ID Number
+  #instagram        = "example"
+  #tumblr           = ""
+  #twitter          = "example"
+  #skype            = ""
+  #snapchat         = ""
+  #pinterest        = "example"
+  #telegram         = "example"
+  #vine             = ""
+  #googlescholar    = ""
+  #orcid            = ""
+  #researchgate     = "example"
+
+  # Email
+  email            = "gyuhwan.a.kim@gmail.com"
