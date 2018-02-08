@@ -120,7 +120,7 @@ pluralizeListTitles = false
   # Coding Communities
   github           = "gyuhwankim"
   #gitlab           = ""
-  #stackoverflow    = "" # User Number
+  stackoverflow    = "9326966" # User Number
   #bitbucket        = ""
   #jsfiddle         = ""
   #codepen          = ""
@@ -136,7 +136,7 @@ pluralizeListTitles = false
   #medium           = ""
 
   # Professional/Business Oriented Communities
-  #linkedin         = "example"
+  linkedin         = "gyuhwan-kim-272248129"
   #linkedin_company = "examplebusiness"
   #foursquare       = ""
   #xing             = ""
