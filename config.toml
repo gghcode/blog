@@ -1,6 +1,6 @@
 baseURL = "https://gyuhwankim.github.io/"
 languageCode = "en-us"
-title = "Gyuhwan Kim"
+title = "Gyuhwan's Blog"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 3
