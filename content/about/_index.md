@@ -15,10 +15,10 @@ Hi, I'm Gyuhwan Kim, software engineer;
 
 # Technologies
 - Languages
-    - C++
-    - C#
-    - Go
-    - Python
+    - C# (Skillful)
+    - C++ (Junior)
+    - Python (Junior)
+    - Go (Beginner)
 
 
 - Cloud
