@@ -29,3 +29,7 @@ Hi, I'm Gyuhwan Kim, software engineer;
 - Database
     - MySQL
     - SQL Server
+
+- NoSQL
+    - Redis
+    - MongoDB
