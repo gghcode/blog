@@ -1,4 +1,4 @@
-baseURL = "https://gyuhwankim.github.io/"
+baseURL = "https://damduk.github.io/"
 languageCode = "en-us"
 title = "Gyuhwan's Blog"
 theme = "hugo-future-imperfect"
@@ -118,7 +118,7 @@ pluralizeListTitles = false
 # and socialAppearAtBottom.
 [social]
   # Coding Communities
-  github           = "gyuhwankim"
+  github           = "damduk"
   #gitlab           = ""
   stackoverflow    = "9326966" # User Number
   #bitbucket        = ""
