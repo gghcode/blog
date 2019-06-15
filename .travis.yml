@@ -1,17 +1,17 @@
-language: go
+language: minimal
 
+env:
+  - TEMP_DIR_PATH=/tmp/hugo
 
-go:
-  - master
-
+cache:
+  directories:
+    - $TEMP_DIR_PATH
 
 install:
-  - go get -u -v github.com/spf13/hugo
-
+  - sudo scripts/install_hugo.sh
 
 script:
-  - hugo
-
+  - hugo --minify
 
 deploy:
   - provider: pages
@@ -20,5 +20,5 @@ deploy:
     skip_cleanup: true
     target_branch: master
     on:
-      branch: hugo
+      branch: blog
 
