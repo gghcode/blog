@@ -1,7 +1,9 @@
 language: minimal
 
 env:
-  - TEMP_DIR_PATH=/tmp/hugo
+  - TEMP_DIR_PATH=/tmp/hugo \
+    TARGET_COMMIT=$TRAVIS_COMMIT \ 
+    BOT_NAME=traviscibot
 
 cache:
   directories:
@@ -14,11 +16,9 @@ script:
   - hugo --minify
 
 deploy:
-  - provider: pages
-    github_token: ${GITHUB_TOKEN}
-    local_dir: public
+  - provider: script
+    script: scripts/deploy.sh
     skip_cleanup: true
-    target_branch: master
     on:
       branch: blog
 
