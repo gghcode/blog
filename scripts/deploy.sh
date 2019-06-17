@@ -40,8 +40,6 @@ deploy() {
    
     git clone -b $TARGET_BRANCH $REPO_URL $DEPLOY_TEMP_DIR_PATH &> /dev/null
 
-    ensure_master_branch
-
     rsync -av --delete --exclude ".git" public/ $DEPLOY_TEMP_DIR_PATH
 
     $bash_c "cd $DEPLOY_TEMP_DIR_PATH &&
@@ -53,18 +51,6 @@ deploy() {
         git push -f -q https://$GITHUB_TOKEN@$REPO_HOST $TARGET_BRANCH"
     
     clean
-}
-
-ensure_master_branch() {
-    cd $DEPLOY_TEMP_DIR_PATH
-
-    git checkout $TARGET_BRANCH &> /dev/null
-    if [ $? -eq 1 ]; then
-        git checkout -b $TARGET_BRANCH
-        git rm -rf *
-    fi
-
-    cd ../
 }
 
 clean() {
