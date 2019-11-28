@@ -1,6 +1,6 @@
 baseURL = "https://gghcode.github.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "gghcode's blog"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsStyle = "trac"
@@ -9,8 +9,8 @@ pygmentsUseClasses = true
 pygmentsCodefencesGuessSyntax = true
 
 [Params]
-#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
-  subtitle = "Build a beautiful and simple website in minutes"
+  homeTitle = "Beautiful Hugo Theme2" # Set a different text for the header on the home page
+  subtitle = "Subtitle"
   mainSections = ["post","posts"]
   logo = "img/avatar-icon.png" # Expecting square dimensions
   favicon = "img/favicon.ico"

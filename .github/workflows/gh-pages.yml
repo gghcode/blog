@@ -10,9 +10,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
-
-        # with:
-        #   submodules: true
+        with:
+          submodules: true
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2.3.0
         with:
@@ -26,5 +25,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          PUBLISH_BRANCH: gh-pages
+          EXTERNAL_REPOSITORY: gghcode/gghcode.github.io
+          PUBLISH_BRANCH: master
           PUBLISH_DIR: ./public
