@@ -10,6 +10,7 @@ pygmentsCodefencesGuessSyntax = true
 
 [Params]
   homeTitle = "Beautiful Hugo Theme2" # Set a different text for the header on the home page
+  repo = 'gghcode/blog'
   subtitle = "Subtitle"
   mainSections = ["post","posts"]
   logo = "img/avatar-icon.png" # Expecting square dimensions
