@@ -12,6 +12,7 @@ enableEmoji = true
   # LoveIt theme version
   version = "0.1.X"
   gitRepo = "https://github.com/gghcode"
+  utterancesRepo = 'gghcode/blog'
 
   [params.header]
     # desktop header mode ("fixed", "normal", "auto")
@@ -33,7 +34,7 @@ enableEmoji = true
       # URL of avatar shown in home page
       avatarURL = "https://avatars3.githubusercontent.com/u/14357806?s=460&u=fbbd789a04989fb7800ed7c99b54f17901f70579&v=4"
       # subtitle shown in home page
-      subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+      subtitle = "SRE Enginner"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
