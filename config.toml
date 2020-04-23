@@ -1,48 +1,125 @@
 baseURL = "https://gghcode.github.io/"
+defaultContentLanguage = "en"
 languageCode = "en-us"
-title = "gghcode's blog"
-theme = "beautifulhugo"
-metaDataFormat = "yaml"
-pygmentsStyle = "trac"
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-pygmentsCodefencesGuessSyntax = true
+title = "gghcode"
 
-[Params]
-  homeTitle = "Beautiful Hugo Theme2" # Set a different text for the header on the home page
-  repo = 'gghcode/blog'
-  subtitle = "Subtitle"
-  mainSections = ["post","posts"]
-  logo = "img/avatar-icon.png" # Expecting square dimensions
-  favicon = "img/favicon.ico"
-  dateFormat = "January 2, 2006"
-  commit = false
-  rss = true
-  comments = true
-  readingTime = true
-  wordCount = true
-  useHLJS = true
-  socialShare = true
-  delayDisqus = true
-  showRelatedPosts = true
+theme = "LoveIt"
 
-[Author]
-  name = "Gyuhwan Kim"
-  website = "gghcode.github.io"
-  email = "gghcode@gmail.com"
-  github = "gghcode"
+enableGitInfo = true
+enableEmoji = true
 
-[[menu.main]]
-    name = "Blog"
-    url = ""
+[params]
+  # LoveIt theme version
+  version = "0.1.X"
+  gitRepo = "https://github.com/gghcode"
+  utterancesRepo = 'gghcode/blog'
+
+  [params.header]
+    # desktop header mode ("fixed", "normal", "auto")
+    desktopMode = "fixed"
+    # mobile header mode ("fixed", "normal", "auto")
+    mobileMode = "auto"
+
+  # site description
+  description = "About LoveIt Theme"
+  # site keywords
+  keywords = ["Theme", "Hugo"]
+  # site default theme ("light", "dark", "auto")
+  defaultTheme = "auto"
+  # Home Page Info
+  [params.home]
+    # Home Page Profile
+    [params.home.profile]
+      enable = true
+      # URL of avatar shown in home page
+      avatarURL = "https://avatars3.githubusercontent.com/u/14357806?s=460&u=fbbd789a04989fb7800ed7c99b54f17901f70579&v=4"
+      # subtitle shown in home page
+      subtitle = "SRE Enginner"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+    # Home Page Posts
+    [params.home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 6
+      # default behavior when you don't set "hiddenFromHomePage" in front matter
+      defaultHiddenFromHomePage = false
+    
+    [params.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = true
+      HackerNews = true
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is allowed), such as icons
+    pre = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
     weight = 1
-
-[[menu.main]]
-    name = "About"
-    url = "page/about/"
-    weight = 3
-
-[[menu.main]]
-    identifier = "samples"
-    name = "Samples"
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
     weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 3
+  [[menu.main]]
+    identifier = "about"
+    pre = ""
+    name = "About"
+    url = "/about/"
+    title = ""
+    weight = 4
+  [[menu.main]]
+    identifier = "github"
+    pre = "<i class='fab fa-github fa-fw'></i>"
+    name = ""
+    url = "https://github.com/gghcode"
+    title = "GitHub"
+    weight = 5
+
+# Author Info
+[author]
+  name = "gghcode"
+
+# Privacy Info (https://gohugo.io/about/hugo-and-gdpr/)
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# Options to make output .md files
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["md"]
+
+# Options to make output .md files
+[outputFormats.MarkDown]
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false
+
+# Options to make hugo output files
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
