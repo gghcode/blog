@@ -1,58 +1,12 @@
-baseURL = "https://gghcode.github.io/"
+baseURL = "https://gghcode.github.io"
 defaultContentLanguage = "en"
 languageCode = "en-us"
+theme = "LoveIt"
 title = "gghcode"
 
-theme = "LoveIt"
-
-enableGitInfo = true
+enableRobotsTXT = true
+enableGitInfo = false
 enableEmoji = true
-
-[params]
-  # LoveIt theme version
-  version = "0.1.X"
-  gitRepo = "https://github.com/gghcode"
-  utterancesRepo = 'gghcode/blog'
-
-  [params.header]
-    # desktop header mode ("fixed", "normal", "auto")
-    desktopMode = "fixed"
-    # mobile header mode ("fixed", "normal", "auto")
-    mobileMode = "auto"
-
-  # site description
-  description = "About LoveIt Theme"
-  # site keywords
-  keywords = ["Theme", "Hugo"]
-  # site default theme ("light", "dark", "auto")
-  defaultTheme = "auto"
-  # Home Page Info
-  [params.home]
-    # Home Page Profile
-    [params.home.profile]
-      enable = true
-      # URL of avatar shown in home page
-      avatarURL = "https://avatars3.githubusercontent.com/u/14357806?s=460&u=fbbd789a04989fb7800ed7c99b54f17901f70579&v=4"
-      # subtitle shown in home page
-      subtitle = "SRE Enginner"
-      # whether to use typeit animation for subtitle
-      typeit = true
-      # whether to show social links
-      social = true
-    # Home Page Posts
-    [params.home.posts]
-      enable = true
-      # special amount of posts in each home posts page
-      paginate = 6
-      # default behavior when you don't set "hiddenFromHomePage" in front matter
-      defaultHiddenFromHomePage = false
-    
-    [params.share]
-      enable = true
-      Twitter = true
-      Facebook = true
-      Linkedin = true
-      HackerNews = true
 
 [menu]
   [[menu.main]]
@@ -93,17 +47,213 @@ enableEmoji = true
     title = "GitHub"
     weight = 5
 
+[params]
+  # LoveIt theme version
+  version = "0.2.X"
+
+  # site default theme ("light", "dark", "auto")
+  defaultTheme = "auto"
+
+  # date format
+  dateFormat = "2006-01-02"
+
+  # site description
+  description = "About LoveIt Theme"
+  
+  # site keywords
+  keywords = ["Theme", "Hugo"]
+
+  # which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
+  fingerprint = ""
+
+  # Search config
+  [params.search]
+    enable = true
+    # type of search engine ("lunr", "algolia")
+    type = "algolia"
+    # max index length of the chunked content
+    contentLength = 4000
+    # placeholder of the search bar
+    placeholder = ""
+    # max number of results length
+    maxResultLength = 10
+    # snippet length of the result
+    snippetLength = 30
+    # HTML tag name of the highlight part in results
+    highlightTag = "em"
+    # whether to use the absolute URL based on the baseURL in search index
+    absoluteURL = false
+    [params.search.algolia]
+      index = "blog"
+      appID = "4NULIBC7OG"
+      searchKey = "1ffaf958b83fc96285aa1b7cf2f56dc3"
+
+  # Social config in home page
+  [params.social]
+    GitHub = "gghcode"
+    Linkedin = "gyuhwan-kim-272248129"
+    Facebook = "100005512686445"
+    Email = "gyuhwan.a.kim@gmail.com"
+
+  # Home Page Info
+  [params.home]
+    # Home Page Profile
+    [params.home.profile]
+      enable = true
+      # URL of avatar shown in home page
+      avatarURL = "https://avatars3.githubusercontent.com/u/14357806?s=460&u=fbbd789a04989fb7800ed7c99b54f17901f70579&v=4"
+      # subtitle shown in home page
+      subtitle = "SRE Enginner"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+    # Home Page Posts
+    [params.home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 6
+      # default behavior when you don't set "hiddenFromHomePage" in front matter
+      defaultHiddenFromHomePage = false
+
+  # Header title config
+  [params.header]
+    # desktop header mode ("fixed", "normal", "auto")
+    desktopMode = "fixed"
+    # mobile header mode ("fixed", "normal", "auto")
+    mobileMode = "auto"
+
+    [params.header.title]
+      name = "gghcode"
+      pre = "<i class='fas fa-cannabis fa-fw'></i>"
+      typeit = false
+
+  # Footer config
+  [params.footer]
+    enable = true
+    # whether to show Hugo and theme info
+    hugo = true
+    # whether to show copyright info
+    copyright = true
+    # whether to show the author
+    author = true
+    # site creation time
+    since = 2020
+    # license info (HTML format is supported)
+    license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  # Section (all posts) page config
+  [params.section]
+    # special amount of posts in each section page
+    paginate = 20
+    # date format (month and day)
+    dateFormat = "01-02"
+    # amount of RSS pages
+    rss = 10
+
+  # List (category or tag) page config
+  [params.list]
+    # special amount of posts in each list page
+    paginate = 20
+    # date format (month and day)
+    dateFormat = "01-02"
+    # amount of RSS pages
+    rss = 10
+
+  # Page config
+  [params.page]
+    # whether to hide a page from home page
+    hiddenFromHomePage = false
+    # whether to hide a page from search results
+    hiddenFromSearch = false
+    # whether to enable twemoji
+    twemoji = false
+    # whether to enable lightgallery
+    lightgallery = false
+    # whether to enable the ruby extended syntax
+    ruby = true
+    # whether to enable the fraction extended syntax
+    fraction = true
+    # whether to enable the fontawesome extended syntax
+    fontawesome = true
+    # whether to show link to Raw Markdown content of the content
+    linkToMarkdown = true
+    # whether to show the full text content in RSS
+    rssFullText = false
+
+    # Table of the contents config
+    [params.page.toc]
+      # whether to enable the table of the contents
+      enable = true
+      # whether to keep the static table of the contents in front of the post
+      keepStatic = false
+      # whether to make the table of the contents in the sidebar automatically collapsed
+      auto = true
+
+    # Code config
+    [params.page.code]
+      # whether to show the copy button of the code block
+      copy = true
+      # the maximum number of lines of displayed code by default
+      maxShownLines = 10
+
+    # KaTeX mathematical formulas config (KaTeX https://katex.org/)
+    [params.page.math]
+      enable = false
+      # default block delimiter is $$ ... $$ and \\[ ... \\]
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
+      # default inline delimiter is $ ... $ and \\( ... \\)
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      # KaTeX extension copy_tex
+      copyTex = true
+      # KaTeX extension mhchem
+      mhchem = true
+
+    # Social share links in post page
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = true
+      HackerNews = true
+      Reddit = true
+
+    # Comment config
+    [params.page.comment]
+      enable = true
+
+      [params.page.comment.utterances]
+        enable = true
+        # owner/repo
+        repo = "gghcode/blog"
+        issueTerm = "pathname"
+        lightTheme = "github-light"
+        darkTheme = "photon-dark"
+
+
+    [params.page.seo]
+      # image URL
+      images = []
+      # Publisher info
+      [params.page.seo.publisher]
+        name = "gghcode"
+        # logoUrl = "/images/avatar.png"
+
+  # Analytics config
+  [params.analytics]
+    enable = true
+    # Google Analytics
+    [params.analytics.google]
+      # whether to anonymize IP
+      id="UA-114410093-2"
+      anonymizeIP = false
+
 # Author Info
 [author]
   name = "gghcode"
-
-# Privacy Info (https://gohugo.io/about/hugo-and-gdpr/)
-[privacy]
-  [privacy.googleAnalytics]
-    anonymizeIP = true
-
-  [privacy.youtube]
-    privacyEnhanced = true
+  email = "gyuhwan.a.kim@gmail.com"
 
 # Options to make output .md files
 [mediaTypes]
