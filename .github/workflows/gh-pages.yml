@@ -40,7 +40,7 @@ jobs:
           node-version: "12"
 
       - name: Upload algolia records
-        run: npm run algolia
+        run: npm install && npm run algolia
         env:
           ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
 
