@@ -1,0 +1,9 @@
+{
+  "name": "blog",
+  "scripts": {
+    "algolia": "ALGOLIA_APP_ID=4NULIBC7OG ALGOLIA_INDEX_NAME=blog ALGOLIA_INDEX_FILE=public/algolia.json atomic-algolia"
+  },
+  "dependencies": {
+    "atomic-algolia": "^0.3.17"
+  }
+}

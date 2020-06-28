@@ -266,9 +266,15 @@ enableEmoji = true
   isPlainText = true
   isHTML = false
 
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
 # Options to make hugo output files
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "JSON", "Algolia"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]

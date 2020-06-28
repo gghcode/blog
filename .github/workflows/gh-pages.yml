@@ -1,17 +1,13 @@
-name: github pages
-
-on:
-  push:
-    branches:
-      - master
-
+name: Github Pages
+on: [push]
 jobs:
-  build-deploy:
+  Build:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
         with:
           submodules: true
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2.3.0
         with:
@@ -20,10 +16,37 @@ jobs:
       - name: Build
         run: hugo --minify -e production
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2.5.0
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          EXTERNAL_REPOSITORY: gghcode/gghcode.github.io
-          PUBLISH_BRANCH: master
-          PUBLISH_DIR: ./public
+      - name: Upload deployment package
+        uses: actions/upload-artifact@v1
+        with:
+          name: deployment
+          path: public/
+
+  Deploy:
+    runs-on: ubuntu-18.04
+    if: ${{ github.ref == 'refs/heads/master' }}
+    needs:
+      - "Build"
+    steps:
+      - name: Download deployment package
+        uses: actions/download-artifact@v1
+        with:
+          name: deployment
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+
+      - run: ls
+      - run: ls deployment
+      # - name: Upload algolia records
+      #   run: npm run algolia
+      #   env:
+      #     ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v2.5.0
+      #   env:
+      #     ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+      #     EXTERNAL_REPOSITORY: gghcode/gghcode.github.io
+      #     PUBLISH_BRANCH: master
+      #     PUBLISH_DIR: ./public
