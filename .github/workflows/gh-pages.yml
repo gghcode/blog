@@ -28,6 +28,8 @@ jobs:
     needs:
       - "Build"
     steps:
+      - uses: actions/checkout@master
+
       - name: Download deployment package
         uses: actions/download-artifact@v1
         with:
