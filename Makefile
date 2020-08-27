@@ -11,7 +11,7 @@ ifeq ($(UNAME_OS),Darwin)
 	OS=macOS
 endif
 ifeq ($(UNAME_OS),Linux)
-	OS=linux
+	OS=Linux
 endif
 
 HUGO_RELEASE_URL := https://github.com/gohugoio/hugo/releases/download
@@ -29,7 +29,7 @@ HUGO := $(CACHE_VERSIONS)/hugo/$(HUGO_VER)
 $(HUGO):
 	@rm -f $(CACHE_BIN)/hugo
 	@mkdir -p $(CACHE_BIN)
-	curl -sL $(REALASE_FILE_URL) | tar xvf - -C $(CACHE_BIN)
+	curl -sL $(REALASE_FILE_URL) | tar xvfz - -C $(CACHE_BIN)
 	@chmod +x $(CACHE_BIN)/hugo
 	@rm -rf $(dir $(HUGO))
 	@mkdir -p $(dir $(HUGO))
