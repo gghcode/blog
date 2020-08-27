@@ -10,7 +10,7 @@ BIT := $(shell getconf LONG_BIT)
 ifeq ($(UNAME_OS),Darwin)
 	OS=macOS
 endif
-ifeq ($(UNAME_OS),LINUX)
+ifeq ($(UNAME_OS),Linux)
 	OS=linux
 endif
 
@@ -18,8 +18,7 @@ HUGO_RELEASE_URL := https://github.com/gohugoio/hugo/releases/download
 REALASE_FILE_URL := $(HUGO_RELEASE_URL)/v$(HUGO_VER)/hugo_$(HUGO_VER)_$(OS)-$(BIT)bit.tar.gz
 
 # hugo will be cached to ~/.cache/blog.
-CACHE_BASE := $(HOME)/.cache/$(PROJECT)
-CACHE := $(CACHE_BASE)/$(UNAME_OS)/$(UNAME_ARCH)
+CACHE := $(HOME)/.cache/$(PROJECT)
 CACHE_BIN := $(CACHE)/bin
 CACHE_VERSIONS := $(CACHE)/versions
 
