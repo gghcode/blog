@@ -26,14 +26,22 @@ CACHE_VERSIONS := $(CACHE)/versions
 export PATH := $(abspath $(CACHE_BIN)):$(PATH)
 
 # If HUGO_VER is changed, the binary will be re-downloaded.
-HUGO := $(CACHE_VERSIONS)/buf/$(HUGO_VER)
+HUGO := $(CACHE_VERSIONS)/hugo/$(HUGO_VER)
 $(HUGO):
 	@rm -f $(CACHE_BIN)/hugo
 	@mkdir -p $(CACHE_BIN)
 	curl -sL $(REALASE_FILE_URL) | tar xvf - -C $(CACHE_BIN)
 	@chmod +x $(CACHE_BIN)/hugo
+	@rm -rf $(dir $(HUGO))
 	@mkdir -p $(dir $(HUGO))
 	@touch $(HUGO)
 
-run: $(HUGO)
+
+version: $(HUGO)
 	@hugo version
+
+run: $(HUGO)
+	@hugo server -D --minify -e production
+
+build: $(HUGO)
+	hugo --minify -e production
