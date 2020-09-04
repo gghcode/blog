@@ -44,3 +44,6 @@ run: $(HUGO)
 
 build: $(HUGO)
 	hugo --minify -e production
+
+post: $(HUGO)
+	hugo new posts/$$(date "+%Y-%m-%d")-$(title).md
