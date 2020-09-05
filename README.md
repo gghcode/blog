@@ -2,19 +2,33 @@ This is repository contained blog contents. You can visit blog at gghcode.github
 
 # Basic Usage
 
-## 1. Build
+## 1. Clone blog repository
+
+```sh
+$ git clone --recursive git@github.com:gghcode/blog.git
+```
+
+or
+
+```sh
+$ git clone git@github.com:gghcode/blog.git
+$ git submodule init
+$ git submodule update
+```
+
+## 2. Build hugo site
 
 ```sh
 $ make build
 ```
 
-## 2. Run hugo-server on local
+## 3. Run hugo-server on local
 
 ```sh
 $ make run
 ```
 
-## 3. Create new blog post
+## 4. Create new blog post
 
 ```sh
 $ make post title="<title>"
